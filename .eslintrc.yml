@@ -9,6 +9,7 @@ extends:
   - plugin:@typescript-eslint/strict
   - plugin:github/recommended
   - plugin:unicorn/recommended
+  - prettier
 parser: "@typescript-eslint/parser"
 parserOptions:
   ecmaVersion: latest
@@ -20,16 +21,15 @@ plugins:
   - json-format
   - unicorn
   - promise
-  - prettier
 rules:
-  unicorn/prevent-abbreviations:
-    - error
-    - ignore:
-        - "next-env"
-  unicorn/prefer-module:
-    - off
-  import/no-commonjs:
-    - off
+  filenames/match-regex: off
+  import/no-commonjs: off
+  import/no-namespace: off
+  unicorn/prevent-abbreviations: off
+  unicorn/prefer-module: off
+  unicorn/filename-case: off
+  no-console: off
+  no-unused-vars: off
   promise/always-return: error
   promise/no-return-wrap: error
   promise/param-names: error
@@ -38,7 +38,8 @@ rules:
   promise/no-nesting: warn
   promise/no-promise-in-callback: warn
   promise/no-callback-in-promise: warn
-  promise/avoid-new: warn
   promise/no-new-statics: error
   promise/no-return-in-finally: warn
   promise/valid-params: warn
+  promise/avoid-new: off
+  react/prop-types: off
