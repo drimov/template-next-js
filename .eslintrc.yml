@@ -1,6 +1,8 @@
 env:
   browser: true
   es2021: true
+  jest: true
+root: true
 extends:
   - next/core-web-vitals
   - eslint:recommended

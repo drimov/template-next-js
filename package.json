@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier . --check",
-    "format:fix": "prettier . --write"
+    "format:fix": "prettier . --write",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
@@ -22,11 +24,16 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.1",
+    "@testing-library/react": "^14.2.1",
+    "@testing-library/user-event": "^14.5.2",
     "@types/node": "^20.11.10",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^1.2.2",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
@@ -35,11 +42,16 @@
     "eslint-plugin-json-format": "^2.0.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-testing-library": "^6.2.0",
     "eslint-plugin-unicorn": "^50.0.1",
+    "eslint-plugin-vitest": "^0.3.21",
+    "jsdom": "^24.0.0",
     "postcss": "^8.4.33",
     "prettier": "3.2.4",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vite-tsconfig-paths": "^4.3.1",
+    "vitest": "^1.2.2"
   }
 }

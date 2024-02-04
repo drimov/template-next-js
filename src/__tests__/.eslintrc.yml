@@ -1,0 +1,12 @@
+extends:
+  - plugin:vitest/all
+rules:
+  vitest/prefer-expect-assertions: off
+  vitest/no-hooks:
+    - error
+    - allow:
+        - afterEach
+        - afterAll
+        - beforeAll
+        - beforeEach
+  import/named: off
